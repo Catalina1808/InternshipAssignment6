@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace InternshipAssignment6
 {
-    internal class GenericList <Type>
+    internal class GenericCollection <Type>
     {
         private readonly Type[] _items;
         private int _currentIndex = -1;
         private readonly int _maxSize;
 
-        public GenericList(int maxSize = 10)
+        public GenericCollection(int maxSize = 10)
         {
             _maxSize = maxSize;
             _items = new Type[maxSize];

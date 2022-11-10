@@ -1,7 +1,6 @@
-﻿
-using InternshipAssignment6;
+﻿using InternshipAssignment6;
 
-GenericList<string> genericList = new GenericList<string>(4);
+GenericCollection<string> genericList = new GenericCollection<string>(4);
 genericList.SetAtIndex(0, "string1");
 genericList.SetAtIndex(1, "string2");
 genericList.SetAtIndex(2, "string3");
