@@ -21,18 +21,9 @@ namespace InternshipAssignment6
 
         public int Count => _currentIndex + 1;
 
-        public void Add(Type item)
-        {
-            if(_currentIndex >= _maxSize - 1)
-            {
-                throw new Exception("List is full");
-            }
-            _items[++_currentIndex] = item;
-        }
-
         public Type GetAtIndex(int index)
         {
-            if (index >= Count)
+            if (index >= _maxSize)
             {
                 throw new IndexOutOfRangeException("Index out of range!");
             }
@@ -41,7 +32,7 @@ namespace InternshipAssignment6
 
         public void SetAtIndex(int index, Type item)
         {
-            if (index >= Count)
+            if (index >= _maxSize)
             {
                 throw new IndexOutOfRangeException("Index out of range!");
             }
@@ -50,7 +41,7 @@ namespace InternshipAssignment6
 
         public void SwapByIndexes(int index1, int index2)
         {
-            if (index1 >= Count || index2 >= Count)
+            if (index1 >= _maxSize || index2 >= _maxSize)
             {
                 throw new IndexOutOfRangeException("Index out of range!");
             }
@@ -63,7 +54,7 @@ namespace InternshipAssignment6
         {
             int index1 = -1, index2 = -1;
 
-            for(int i=0; i<Count; i++)
+            for(int i=0; i<_maxSize; i++)
             {
                 if (_items[i].Equals(item1))
                 {
